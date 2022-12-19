@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: @alex289
+          scope: '@alex289'
       - name: Install dependencies and build 🔧
         run: npm i pnpm -g && pnpm i && pnpm run build
       - name: Publish package on NPM 📦
