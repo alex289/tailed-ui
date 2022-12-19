@@ -1,0 +1,42 @@
+{
+	"name": "template-react-component-library",
+  	"version": "0.0.1",
+  	"description": "A simple template for a custom React component library",
+	"scripts": {
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"format": "prettier --write **/*.tsx",
+		"lint": "eslint --ext .tsx,.ts src",
+		"typecheck": "tsc --noEmit"
+	},
+	"author": "alex289",
+  	"license": "ISC",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"files": [
+		"dist"
+	],
+	"types": "dist/index.d.ts",
+	"dependencies": {
+		"@storybook/addon-actions": "^6.5.14",
+		"@storybook/addon-links": "^6.5.14",
+		"@storybook/addon-postcss": "^2.0.0",
+		"@storybook/react": "^6.5.14",
+		"@types/react": "^18.0.26",
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.20",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"storybook-dark-mode": "^2.0.4",
+		"tailwindcss": "^3.2.4",
+		"typescript": "^4.9.4"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.46.1",
+		"@typescript-eslint/parser": "^5.46.1",
+		"eslint": "^8.30.0",
+		"eslint-plugin-react": "^7.31.11",
+		"prettier": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.2.1"
+	}
+}
