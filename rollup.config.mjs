@@ -31,7 +31,7 @@ export default [
         tsconfig: './tsconfig.json',
         compilerOptions: { declaration: true, declarationDir: './types' },
       }),
-      postcss(),
+      postcss({ extract: true }),
       terser(),
     ],
   },
