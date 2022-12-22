@@ -9,6 +9,7 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"format": "prettier --write **/*.tsx",
+		"format:check": "prettier --check **/*.tsx",
 		"lint": "eslint --ext .tsx,.ts src",
 		"typecheck": "tsc --noEmit",
 		"build": "rollup -c --bundleConfigAsCjs"
@@ -19,7 +20,10 @@
 		"dist"
 	],
 	"types": "dist/index.d.ts",
-	"author": "alex289",
+	"author": {
+		"name": "Alexander Konietzko",
+		"url": "https://alexanderkonietzko.vercel.app"
+	  },
 	"license": "MIT",
 	"repository": {
 		"type": "git",
