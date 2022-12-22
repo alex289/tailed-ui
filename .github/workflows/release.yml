@@ -4,7 +4,7 @@ on:
     types: [created]
   workflow_dispatch:
 jobs:
-  build:
+  release_github:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,6 +15,23 @@ jobs:
           node-version: '18.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@alex289'
+      - name: Install dependencies and build 🔧
+        run: npm i pnpm -g && pnpm i && pnpm run build
+      - name: Publish package on NPM 📦
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GHR_TOKEN }}
+
+  release_npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: npm i pnpm -g && pnpm i && pnpm run build
       - name: Publish package on NPM 📦
