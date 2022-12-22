@@ -4,6 +4,7 @@
             "version": "detect"
         }
     },
+    "ignorePatterns": ["src/**/*.stories.tsx"],
     "overrides": [
         {
             "files": ["**/*.ts", "**/*.tsx"],
