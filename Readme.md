@@ -1,7 +1,7 @@
 # Tailed-ui
 
 ![Build](https://img.shields.io/github/actions/workflow/status/alex289/tailed-ui/release.yml?style=flat-square)
-![License](https://img.shields.io/github/license/alex289/tailed-ui)
+![License](https://img.shields.io/github/license/alex289/tailed-ui?style=flat-square)
 
 ### Installation
 
@@ -58,4 +58,4 @@ To export your Storybook as static files:
 npm run storybook:export
 ```
 
-You can then serve the files under `storybook-static` using S3, GitHub pages, Express etc. I've hosted this library at: coming soon
+You can then serve the files under `storybook-static` using S3, GitHub pages, Express etc. I've hosted this library at: https://tailed-ui.vercel.app
