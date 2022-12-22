@@ -40,7 +40,10 @@
 	],
 	"dependencies": {
 		"@storybook/addon-actions": "^6.5.14",
+		"@storybook/addon-essentials": "^6.5.15",
 		"@storybook/addon-postcss": "^2.0.0",
+		"@storybook/builder-webpack5": "^6.5.15",
+		"@storybook/manager-webpack5": "^6.5.15",
 		"@storybook/react": "^6.5.14",
 		"@types/react": "^18.0.26",
 		"autoprefixer": "^10.4.13",
