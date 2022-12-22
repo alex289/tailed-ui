@@ -6,7 +6,6 @@ specifiers:
   '@rollup/plugin-terser': ^0.2.0
   '@rollup/plugin-typescript': ^10.0.1
   '@storybook/addon-actions': ^6.5.14
-  '@storybook/addon-links': ^6.5.14
   '@storybook/addon-postcss': ^2.0.0
   '@storybook/react': ^6.5.14
   '@types/react': ^18.0.26
@@ -31,7 +30,6 @@ specifiers:
 
 dependencies:
   '@storybook/addon-actions': 6.5.14_biqbaboplfbrettd7655fr4n2y
-  '@storybook/addon-links': 6.5.14_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-postcss': 2.0.0
   '@storybook/react': 6.5.14_u7mmoyqfty2flmkfggora6dwra
   '@types/react': 18.0.26
@@ -1887,33 +1885,6 @@ packages:
       ts-dedent: 2.2.0
       util-deprecate: 1.0.2
       uuid-browser: 3.1.0
-    dev: false
-
-  /@storybook/addon-links/6.5.14_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-Q4gNVFi3PqJH/YYmYJ6xX7a2VPZYs8QV97fMIjdg7/k4FLelSRj7QfsHc7jO2RGG2qQpenapO569jFoVNAW4/Q==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/addons': 6.5.14_biqbaboplfbrettd7655fr4n2y
-      '@storybook/client-logger': 6.5.14
-      '@storybook/core-events': 6.5.14
-      '@storybook/csf': 0.0.2--canary.4566f4d.1
-      '@storybook/router': 6.5.14_biqbaboplfbrettd7655fr4n2y
-      '@types/qs': 6.9.7
-      core-js: 3.26.1
-      global: 4.4.0
-      prop-types: 15.8.1
-      qs: 6.11.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      regenerator-runtime: 0.13.11
-      ts-dedent: 2.2.0
     dev: false
 
   /@storybook/addon-postcss/2.0.0:
