@@ -12,3 +12,6 @@
 ### v0.0.5 23.12.2022
 - Remove releasing to GitHub registry
 - Fix release workflow
+
+### v0.0.8 23.12.2022
+- Extend button component and its stories
