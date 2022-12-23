@@ -5,6 +5,7 @@ import dts from 'rollup-plugin-dts';
 import postcss from 'rollup-plugin-postcss';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
+import copy from 'rollup-plugin-copy';
 
 import packageJson from './package.json' assert { type: 'json' };
 
@@ -31,8 +32,11 @@ export default [
         tsconfig: './tsconfig.json',
         compilerOptions: { declaration: true, declarationDir: './types' },
       }),
-      postcss({ extract: true }),
+      postcss({ extract: true, minimize: true }),
       terser(),
+      copy({
+        targets: [{ src: 'dist/cjs/index.css', dest: 'dist/' }],
+      }),
     ],
   },
   {
