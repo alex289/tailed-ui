@@ -7,14 +7,21 @@ export default {
   component: Button,
 };
 
-export const Text = () => (
-  <Button onClick={action('clicked')}>Hello Button</Button>
-);
-
-export const Emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
+const Template = (args) => (
+  <Button onClick={args.onclick} {...args}>
+    {args.label}
   </Button>
 );
+
+export const Primary = Template.bind({});
+Primary.args = {
+  label: 'Hello world',
+  onclick: action('clicked'),
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: 'Hello world',
+  onclick: action('clicked'),
+  disabled: true,
+};

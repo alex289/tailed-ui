@@ -1,15 +1,15 @@
 import React from 'react';
 
-interface ButtonProps {
-  children: React.ReactNode;
-  onClick: () => void;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children = null, ...props }) => {
   return (
     <button
-      className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 dark:bg-red-500"
-      onClick={onClick}>
+      {...props}
+      type={props.type || 'button'}
+      className={`mx-3 mb-2 rounded-lg bg-violet-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-violet-700 disabled:cursor-not-allowed dark:bg-violet-700 hover:dark:bg-violet-900`}>
       {children}
     </button>
   );
