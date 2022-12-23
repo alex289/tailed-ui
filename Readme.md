@@ -8,11 +8,11 @@
 Install the package with your favorite package manager:
 
 ```
-npm install @alex289/tailed-ui
+npm install tailed-ui
 
-yarn add @alex289/tailed-ui
+yarn add tailed-ui
 
-pnpm install @alex289/tailed-ui
+pnpm install tailed-ui
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ pnpm install @alex289/tailed-ui
 First, you'll need to import the `index.css` CSS file distributed by the package. This should be done at the root of your project (in `index.js` or `App.tsx` of your React app) and will look like:
 
 ```tsx
-import '@alex289/tailed-ui/index.css';
+import 'tailed-ui/index.css';
 
 ...
 ```
@@ -32,7 +32,7 @@ Usage of components (after the library installed as a dependency into another pr
 
 ```TSX
 import React from "react";
-import { TestComponent } from "@alex289/tailed-ui";
+import { TestComponent } from "tailed-ui";
 
 const App = () => (
   <div className="app-container">

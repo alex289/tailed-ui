@@ -8,3 +8,7 @@
 - Publish to the npm registry
 - Minor refactoring
 - Dependency updates
+
+### v0.0.5 23.12.2022
+- Remove releasing to GitHub registry
+- Fix release workflow
