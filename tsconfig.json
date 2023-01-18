@@ -7,14 +7,12 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "es5",
-    "esModuleInterop":true,
+    "esModuleInterop": true,
     "strict": true,
     "incremental": true,
     "skipLibCheck": true,
-    "outDir": "dist",
+    "outDir": "dist"
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": ["src/**/*.stories.tsx"]
 }

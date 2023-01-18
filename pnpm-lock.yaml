@@ -15,6 +15,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.48.2
   '@typescript-eslint/parser': ^5.48.2
   autoprefixer: ^10.4.13
+  class-variance-authority: ^0.4.0
   eslint: ^8.32.0
   eslint-plugin-react: ^7.32.1
   postcss: ^8.4.21
@@ -41,6 +42,7 @@ dependencies:
   '@storybook/react': 6.5.15_xausoce47uumwuoiopqp7vsijy
   '@types/react': 18.0.27
   autoprefixer: 10.4.13_postcss@8.4.21
+  class-variance-authority: 0.4.0_typescript@4.9.4
   postcss: 8.4.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -5786,6 +5788,17 @@ packages:
       define-property: 0.2.5
       isobject: 3.0.1
       static-extend: 0.1.2
+    dev: false
+
+  /class-variance-authority/0.4.0_typescript@4.9.4:
+    resolution: {integrity: sha512-74enNN8O9ZNieycac/y8FxqgyzZhZbxmCitAtAeUrLPlxjSd5zA7LfpprmxEcOmQBnaGs5hYhiSGnJ0mqrtBLQ==}
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 4.9.4
     dev: false
 
   /clean-css/4.2.4:
