@@ -6,34 +6,49 @@ export default {
   component: Alert,
 };
 
-const Template = (args) => <Alert {...args}>{args.label}</Alert>;
+const Template = (args) => <Alert {...args} />;
 
 export const Info = Template.bind({});
 Info.args = {
-  label: 'Change a few things up and try submitting again.',
-  color: 'info',
+  title: 'Info Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'info',
+  icon: true,
+  onClose: () => console.log('close'),
 };
 
 export const Danger = Template.bind({});
 Danger.args = {
-  label: 'Change a few things up and try submitting again.',
-  color: 'danger',
+  title: 'Danger Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'danger',
+  icon: true,
+  onClose: () => console.log('close'),
 };
 
 export const Success = Template.bind({});
 Success.args = {
-  label: 'Change a few things up and try submitting again.',
-  color: 'success',
+  title: 'Success Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'success',
+  icon: true,
+  onClose: () => console.log('close'),
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
-  label: 'Change a few things up and try submitting again.',
-  color: 'warning',
+  title: 'Warning Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'warning',
+  icon: true,
+  onClose: () => console.log('close'),
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-  label: 'Change a few things up and try submitting again.',
-  color: 'dark',
+  title: 'Dark Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'dark',
+  icon: true,
+  onClose: () => console.log('close'),
 };
