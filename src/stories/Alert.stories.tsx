@@ -14,7 +14,7 @@ Info.args = {
   message: 'Change a few things up and try submitting again.',
   status: 'info',
   icon: true,
-  onClose: () => console.log('close'),
+  showCloseButton: true,
 };
 
 export const Danger = Template.bind({});
@@ -23,7 +23,7 @@ Danger.args = {
   message: 'Change a few things up and try submitting again.',
   status: 'danger',
   icon: true,
-  onClose: () => console.log('close'),
+  showCloseButton: true,
 };
 
 export const Success = Template.bind({});
@@ -32,7 +32,7 @@ Success.args = {
   message: 'Change a few things up and try submitting again.',
   status: 'success',
   icon: true,
-  onClose: () => console.log('close'),
+  showCloseButton: true,
 };
 
 export const Warning = Template.bind({});
@@ -41,7 +41,7 @@ Warning.args = {
   message: 'Change a few things up and try submitting again.',
   status: 'warning',
   icon: true,
-  onClose: () => console.log('close'),
+  showCloseButton: true,
 };
 
 export const Dark = Template.bind({});
@@ -50,5 +50,5 @@ Dark.args = {
   message: 'Change a few things up and try submitting again.',
   status: 'dark',
   icon: true,
-  onClose: () => console.log('close'),
+  showCloseButton: true,
 };

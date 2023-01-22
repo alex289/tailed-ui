@@ -55,11 +55,21 @@ export interface AlertProps extends AlertVariantProps {
   children: React.ReactNode;
   title?: string;
   message?: string;
-  icon: boolean;
-  onClose: () => void;
+  icon?: boolean;
+  showCloseButton?: boolean;
 }
 
-const Alert: React.FC<AlertProps> = ({ title, message, icon, ...props }) => {
+const Alert: React.FC<AlertProps> = ({
+  title,
+  message,
+  icon = true,
+  showCloseButton = false,
+  ...props
+}) => {
+  const [show, setShow] = React.useState(true);
+  if (!show) {
+    return null;
+  }
   return (
     <div className={AlertStyles(props)} role="alert">
       {icon && (
@@ -79,22 +89,24 @@ const Alert: React.FC<AlertProps> = ({ title, message, icon, ...props }) => {
         <span className="mr-1 font-medium">{title}</span>
         {message}
       </div>
-      <button
-        type="button"
-        onClick={props.onClose}
-        className="-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:ring-2 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <svg
-          aria-hidden="true"
-          className="h-5 w-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            fillRule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clipRule="evenodd"></path>
-        </svg>
-      </button>
+      {showCloseButton && (
+        <button
+          type="button"
+          onClick={() => setShow(false)}
+          className="-mx-1.5 -my-1.5 ml-auto inline-flex h-8 w-8 rounded-lg p-1.5 focus:ring-2 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <svg
+            aria-hidden="true"
+            className="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"></path>
+          </svg>
+        </button>
+      )}
     </div>
   );
 };
