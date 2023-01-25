@@ -1,5 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export const ButtonStyles = cva(
   [
@@ -132,6 +133,7 @@ interface ButtonProps extends ButtonVariantProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   children?: React.ReactNode;
   loading?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -139,6 +141,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   loading = false,
   type = 'button',
+  className,
   ...props
 }) => {
   return (
@@ -146,7 +149,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       onClick={props.onClick}
       type={type}
-      className={ButtonStyles(props)}>
+      className={twMerge(ButtonStyles(props), className)}>
       {loading && (
         <svg
           aria-hidden="true"

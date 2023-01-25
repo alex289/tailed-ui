@@ -1,5 +1,6 @@
 import React from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
+import { twMerge } from 'tailwind-merge';
 
 export const AlertStyles = cva(
   ['flex', 'p-4', 'mb-4', 'text-sm', 'rounded-lg', 'dark:bg-gray-800'],
@@ -57,6 +58,7 @@ export interface AlertProps extends AlertVariantProps {
   message?: string;
   icon?: boolean;
   showCloseButton?: boolean;
+  className?: string;
 }
 
 const Alert: React.FC<AlertProps> = ({
@@ -64,6 +66,7 @@ const Alert: React.FC<AlertProps> = ({
   message,
   icon = true,
   showCloseButton = false,
+  className,
   ...props
 }) => {
   const [show, setShow] = React.useState(true);
@@ -71,7 +74,7 @@ const Alert: React.FC<AlertProps> = ({
     return null;
   }
   return (
-    <div className={AlertStyles(props)} role="alert">
+    <div className={twMerge(AlertStyles(props), className)} role="alert">
       {icon && (
         <svg
           aria-hidden="true"

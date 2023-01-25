@@ -52,3 +52,14 @@ Dark.args = {
   icon: true,
   showCloseButton: true,
 };
+
+export const CustomStyles = Template.bind({});
+CustomStyles.args = {
+  title: 'Dark Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'dark',
+  icon: true,
+  showCloseButton: true,
+  className:
+    'bg-slate-500 text-white border border-slate-500 dark:bg-slate-800 dark:border-slate-800',
+};

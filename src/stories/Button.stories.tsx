@@ -90,3 +90,13 @@ Disabled.args = {
   disabled: true,
   loading: false,
 };
+
+export const CustomStyles = Template.bind({});
+CustomStyles.args = {
+  label: 'Hello world',
+  onclick: action('clicked'),
+  disabled: false,
+  loading: false,
+  className:
+    'bg-slate-700 dark:bg-slate-600 text-white disabled:bg-slate-400 disabled:dark:bg-slate-500',
+};
