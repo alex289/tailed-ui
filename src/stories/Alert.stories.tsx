@@ -4,6 +4,7 @@ import Alert from '../components/Alert';
 export default {
   title: 'Alert',
   component: Alert,
+  tags: ['autodocs'],
 };
 
 const Template = (args) => <Alert {...args} />;

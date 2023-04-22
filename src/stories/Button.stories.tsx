@@ -1,10 +1,11 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import Button from '../components/Button';
 
 export default {
   title: 'Button',
   component: Button,
+  argTypes: { onclick: { action: 'clicked' } },
+  tags: ['autodocs'],
 };
 
 const Template = ({ onclick, label, ...args }) => (
@@ -16,7 +17,6 @@ const Template = ({ onclick, label, ...args }) => (
 export const Default = Template.bind({});
 Default.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   disabled: false,
   loading: false,
 };
@@ -24,7 +24,6 @@ Default.args = {
 export const Dark = Template.bind({});
 Dark.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'dark',
   disabled: false,
   loading: false,
@@ -33,7 +32,6 @@ Dark.args = {
 export const Light = Template.bind({});
 Light.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'light',
   disabled: false,
   loading: false,
@@ -42,7 +40,6 @@ Light.args = {
 export const Purple = Template.bind({});
 Purple.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'purple',
   disabled: false,
   loading: false,
@@ -51,7 +48,6 @@ Purple.args = {
 export const Red = Template.bind({});
 Red.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'red',
   disabled: false,
   loading: false,
@@ -60,7 +56,6 @@ Red.args = {
 export const Yellow = Template.bind({});
 Yellow.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'yellow',
   disabled: false,
   loading: false,
@@ -69,7 +64,6 @@ Yellow.args = {
 export const Green = Template.bind({});
 Green.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   color: 'green',
   disabled: false,
   loading: false,
@@ -78,7 +72,6 @@ Green.args = {
 export const Loading = Template.bind({});
 Loading.args = {
   label: 'Loading...',
-  onclick: action('clicked'),
   disabled: true,
   loading: true,
 };
@@ -86,7 +79,6 @@ Loading.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   disabled: true,
   loading: false,
 };
@@ -94,7 +86,6 @@ Disabled.args = {
 export const CustomStyles = Template.bind({});
 CustomStyles.args = {
   label: 'Hello world',
-  onclick: action('clicked'),
   disabled: false,
   loading: false,
   className:

@@ -4,10 +4,15 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["src/**/*.stories.tsx"],
+  "ignorePatterns": [
+    "src/**/*.stories.tsx"
+  ],
   "overrides": [
     {
-      "files": ["**/*.ts", "**/*.tsx"],
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
@@ -17,12 +22,19 @@
       "parserOptions": {
         "project": "./tsconfig.json"
       },
-      "plugins": ["react", "@typescript-eslint"],
+      "plugins": [
+        "react",
+        "@typescript-eslint"
+      ],
       "rules": {
         "semi": "warn",
         "eqeqeq": "warn",
         "curly": "warn"
       }
     }
+  ],
+  "extends": [
+    null,
+    "plugin:storybook/recommended"
   ]
 }
