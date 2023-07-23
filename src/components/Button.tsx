@@ -123,7 +123,7 @@ export const ButtonStyles = cva(
           'bg-violet-700 dark:bg-violet-600 text-white disabled:bg-violet-400 disabled:dark:bg-violet-500',
       },
     ],
-  }
+  },
 );
 
 type ButtonVariantProps = VariantProps<typeof ButtonStyles>;

@@ -48,7 +48,7 @@ export const AlertStyles = cva(
         class: 'border-gray-300 dark:border-gray-800',
       },
     ],
-  }
+  },
 );
 
 type AlertVariantProps = VariantProps<typeof AlertStyles>;
