@@ -28,6 +28,7 @@ const config = {
     },
     {
       files: ['**.mjs'],
+      parser: '@babel/eslint-parser',
       parserOptions: {
         sourceType: 'module',
         allowImportExportEverywhere: true,
