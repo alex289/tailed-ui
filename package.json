@@ -1,6 +1,6 @@
 {
   "name": "tailed-ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple component library built with React and TailwindCSS",
   "scripts": {
     "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
