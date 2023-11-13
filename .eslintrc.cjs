@@ -36,7 +36,7 @@ const config = {
   ],
   extends: ['plugin:storybook/recommended'],
   env: {
-    es6: true,
+    es7: true,
   },
 };
 
