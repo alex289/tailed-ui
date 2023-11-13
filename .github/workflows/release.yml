@@ -1,10 +1,13 @@
 name: Release
+
 on:
-  release:
-    types: [created]
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -12,14 +15,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '21.x'
           registry-url: 'https://registry.npmjs.org'
+
       - name: Install dependencies and build 🔧
         run: npm i pnpm -g && pnpm i && pnpm run build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Publish package on NPM 📦
+        if: steps.changesets.outputs.hasChangesets == 'false'
         run: export NPM_CONFIG_PROVENANCE=true && pnpm publish --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
