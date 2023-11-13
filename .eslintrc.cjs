@@ -28,6 +28,7 @@ const config = {
     },
     {
       files: ['**.mjs'],
+      parser: '@babel/eslint-parser',
       parserOptions: {
         sourceType: 'module',
         allowImportExportEverywhere: true,
@@ -36,7 +37,7 @@ const config = {
   ],
   extends: ['plugin:storybook/recommended'],
   env: {
-    es7: true,
+    es6: true,
   },
 };
 
