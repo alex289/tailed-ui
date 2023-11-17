@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.3.1
+
+### Patch Changes
+
+- [`6c4e5c9`](https://github.com/alex289/tailed-ui/commit/6c4e5c9bf37beba51b118f26c77475559eddbf46) Thanks [@alex289](https://github.com/alex289)! - Fix creating github releases when publishing
+
 ## 0.3.0
 
 ### Minor Changes
