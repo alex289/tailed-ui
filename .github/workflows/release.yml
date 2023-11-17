@@ -35,7 +35,7 @@ jobs:
           commit: 'chore(release): 📦 version packages'
           title: 'chore(release): 📦  version packages'
           version: pnpm exec changeset version
-          publish: pnpm exec changeset publish
+          publish: pnpm publish --no-git-checks --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
