@@ -10,7 +10,7 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "pnpm publish --no-git-checks --access public && pnpm exec changeset publish"
+    "release": "pnpm run build && publish --no-git-checks --access public && pnpm exec changeset tag"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
