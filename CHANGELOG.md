@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.3.2
+
+### Patch Changes
+
+- [`3c7b7a1`](https://github.com/alex289/tailed-ui/commit/3c7b7a17dd2a1443d67cddf6f210a223e6e6302a) Thanks [@alex289](https://github.com/alex289)! - Add caching to the pnpm packages and improve the release workflow
+
 ## 0.3.1
 
 ### Patch Changes
