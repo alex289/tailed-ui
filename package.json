@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "build": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "pnpm publish --no-git-checks --access public && pnpm exec changeset publish"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
