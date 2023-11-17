@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- [`9ce067c`](https://github.com/alex289/tailed-ui/commit/9ce067c344f393ad1871adcf57c0dba35e5c2e4f) Thanks [@alex289](https://github.com/alex289)! - Adjust the changeset action to create a github release automatically
+
 ## 0.2.0
 
 ### Minor Changes
