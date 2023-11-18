@@ -1,5 +1,13 @@
 # tailed-ui
 
+## 0.5.0
+
+### Minor Changes
+
+- [`158ad35`](https://github.com/alex289/tailed-ui/commit/158ad355b7cecd29a38766f5969fdb44ade590eb) Thanks [@alex289](https://github.com/alex289)! - Improve the button and alert styles
+
+- [`eb883c2`](https://github.com/alex289/tailed-ui/commit/eb883c207a23c063c2476ebe4364a3af3a5e6659) Thanks [@alex289](https://github.com/alex289)! - Use cva beta to fix typescript variant autocomplete issue
+
 ## 0.4.1
 
 ### Patch Changes
