@@ -1,130 +1,119 @@
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'cva';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export const ButtonStyles = cva(
-  [
-    'mx-3',
-    'mb-2',
-    'rounded-lg',
-    'font-medium',
-    'disabled:cursor-not-allowed',
-    'focus:ring-4',
-    'focus:outline-none',
-    'inline-flex',
-    'items-center',
-  ],
-  {
-    variants: {
-      color: {
-        default:
-          'hover:bg-blue-800 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
-        dark: 'hover:bg-gray-900 focus:ring-gray-300 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700',
-        light:
-          'text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 disabled:bg-gray-100 disabled:dark:bg-gray-700',
-        green:
-          'hover:bg-green-800 focus:ring-green-300 dark:hover:bg-green-700 dark:focus:ring-green-800',
-        yellow:
-          'hover:bg-yellow-800 focus:ring-yellow-300 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800',
-        red: 'hover:bg-red-800 focus:ring-red-300 dark:hover:bg-red-700 dark:focus:ring-red-800',
-        purple:
-          'hover:bg-violet-800 focus:ring-violet-300 dark:hover:bg-violet-700 dark:focus:ring-violet-800',
-      },
-      size: {
-        xs: 'px-3 py-2 text-xs',
-        sm: 'px-3 py-2 text-sm',
-        md: 'px-5 py-2.5 text-sm ',
-        lg: 'px-5 py-3 text-base',
-        xl: 'px-6 py-3.5 text-base',
-      },
-      form: {
-        pill: 'rounded-full',
-      },
-      outline: {
-        active: '',
-      },
+export const ButtonStyles = cva({
+  base: 'mx-3 mb-2 rounded-lg font-medium disabled:cursor-not-allowed focus:ring-4 focus:outline-none inline-flex items-center',
+  variants: {
+    color: {
+      default:
+        'hover:bg-blue-800 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
+      dark: 'hover:bg-gray-900 focus:ring-gray-300 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700',
+      light:
+        'text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 disabled:bg-gray-100 disabled:dark:bg-gray-700',
+      green:
+        'hover:bg-green-800 focus:ring-green-300 dark:hover:bg-green-700 dark:focus:ring-green-800',
+      yellow:
+        'hover:bg-yellow-800 focus:ring-yellow-300 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800',
+      red: 'hover:bg-red-800 focus:ring-red-300 dark:hover:bg-red-700 dark:focus:ring-red-800',
+      purple:
+        'hover:bg-violet-800 focus:ring-violet-300 dark:hover:bg-violet-700 dark:focus:ring-violet-800',
     },
-    defaultVariants: {
-      color: 'default',
-      size: 'md',
-      outline: null,
+    size: {
+      xs: 'px-3 py-2 text-xs',
+      sm: 'px-3 py-2 text-sm',
+      md: 'px-5 py-2.5 text-sm ',
+      lg: 'px-5 py-3 text-base',
+      xl: 'px-6 py-3.5 text-base',
     },
-    compoundVariants: [
-      {
-        color: 'default',
-        outline: 'active',
-        class:
-          'text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800',
-      },
-      {
-        color: 'dark',
-        outline: 'active',
-        class:
-          'text-gray-700 hover:text-white border border-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800',
-      },
-      {
-        color: 'green',
-        outline: 'active',
-        class:
-          'text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-green-300 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800',
-      },
-      {
-        color: 'red',
-        outline: 'active',
-        class:
-          'text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800',
-      },
-      {
-        color: 'yellow',
-        outline: 'active',
-        class:
-          'text-yellow-700 hover:text-white border border-yellow-700 hover:bg-yellow-800 focus:ring-yellow-300 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-800',
-      },
-      {
-        color: 'purple',
-        outline: 'active',
-        class:
-          'text-violet-700 hover:text-white border border-violet-700 hover:bg-violet-800 focus:ring-violet-300 dark:border-violet-500 dark:text-violet-500 dark:hover:text-white dark:hover:bg-violet-600 dark:focus:ring-violet-800',
-      },
-      {
-        color: 'default',
-        outline: null,
-        class:
-          'bg-blue-700 dark:bg-blue-600 text-white disabled:bg-blue-400 disabled:dark:bg-blue-500',
-      },
-      {
-        color: 'dark',
-        outline: null,
-        class:
-          'bg-gray-800 dark:bg-gray-800 text-white disabled:bg-gray-400 disabled:dark:bg-gray-500',
-      },
-      {
-        color: 'green',
-        outline: null,
-        class:
-          'bg-green-700 dark:bg-green-600 text-white disabled:bg-green-400 disabled:dark:bg-green-500',
-      },
-      {
-        color: 'red',
-        outline: null,
-        class:
-          'bg-red-700 dark:bg-red-600 text-white disabled:bg-red-400 disabled:dark:bg-red-500',
-      },
-      {
-        color: 'yellow',
-        outline: null,
-        class:
-          'bg-yellow-700 dark:bg-yellow-600 text-white disabled:bg-yellow-400 disabled:dark:bg-yellow-500',
-      },
-      {
-        color: 'purple',
-        outline: null,
-        class:
-          'bg-violet-700 dark:bg-violet-600 text-white disabled:bg-violet-400 disabled:dark:bg-violet-500',
-      },
-    ],
+    form: {
+      pill: 'rounded-full',
+    },
+    outline: {
+      active: '',
+      inactive: '',
+    },
   },
-);
+  defaultVariants: {
+    color: 'default',
+    size: 'md',
+    outline: 'inactive',
+  },
+  compoundVariants: [
+    {
+      color: 'default',
+      outline: 'active',
+      class:
+        'text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800',
+    },
+    {
+      color: 'dark',
+      outline: 'active',
+      class:
+        'text-gray-700 hover:text-white border border-gray-700 hover:bg-gray-800 focus:ring-gray-300 dark:border-gray-500 dark:text-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800',
+    },
+    {
+      color: 'green',
+      outline: 'active',
+      class:
+        'text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-green-300 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800',
+    },
+    {
+      color: 'red',
+      outline: 'active',
+      class:
+        'text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-red-300 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-800',
+    },
+    {
+      color: 'yellow',
+      outline: 'active',
+      class:
+        'text-yellow-700 hover:text-white border border-yellow-700 hover:bg-yellow-800 focus:ring-yellow-300 dark:border-yellow-500 dark:text-yellow-500 dark:hover:text-white dark:hover:bg-yellow-600 dark:focus:ring-yellow-800',
+    },
+    {
+      color: 'purple',
+      outline: 'active',
+      class:
+        'text-violet-700 hover:text-white border border-violet-700 hover:bg-violet-800 focus:ring-violet-300 dark:border-violet-500 dark:text-violet-500 dark:hover:text-white dark:hover:bg-violet-600 dark:focus:ring-violet-800',
+    },
+    {
+      color: 'default',
+      outline: 'inactive',
+      class:
+        'bg-blue-700 dark:bg-blue-600 text-white disabled:bg-blue-400 disabled:dark:bg-blue-500',
+    },
+    {
+      color: 'dark',
+      outline: 'inactive',
+      class:
+        'bg-gray-800 dark:bg-gray-800 text-white disabled:bg-gray-400 disabled:dark:bg-gray-500',
+    },
+    {
+      color: 'green',
+      outline: 'inactive',
+      class:
+        'bg-green-700 dark:bg-green-600 text-white disabled:bg-green-400 disabled:dark:bg-green-500',
+    },
+    {
+      color: 'red',
+      outline: 'inactive',
+      class:
+        'bg-red-700 dark:bg-red-600 text-white disabled:bg-red-400 disabled:dark:bg-red-500',
+    },
+    {
+      color: 'yellow',
+      outline: 'inactive',
+      class:
+        'bg-yellow-700 dark:bg-yellow-600 text-white disabled:bg-yellow-400 disabled:dark:bg-yellow-500',
+    },
+    {
+      color: 'purple',
+      outline: 'inactive',
+      class:
+        'bg-violet-700 dark:bg-violet-600 text-white disabled:bg-violet-400 disabled:dark:bg-violet-500',
+    },
+  ],
+});
 
 type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';

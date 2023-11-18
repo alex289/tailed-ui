@@ -44,8 +44,6 @@ export default config;
 
 #### Components
 
-> ⚠️ Currently the autocomplete of some style props is not working properly. Please look at the documentation for all component props and styles
-
 Usage of components (after the library installed as a dependency into another project) will look like:
 
 ```TSX

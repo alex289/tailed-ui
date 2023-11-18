@@ -1,55 +1,53 @@
 import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'cva';
 import { twMerge } from 'tailwind-merge';
 
-export const AlertStyles = cva(
-  ['flex', 'p-4', 'mb-4', 'text-sm', 'rounded-lg', 'dark:bg-gray-800'],
-  {
-    variants: {
-      status: {
-        info: 'text-blue-700 dark:text-blue-400 bg-blue-100',
-        danger: 'text-red-700 dark:text-red-400 bg-red-100',
-        success: 'text-green-700 dark:text-green-400 bg-green-100',
-        warning: 'text-yellow-700 dark:text-yellow-400 bg-yellow-100',
-        dark: 'text-gray-700 dark:text-gray-400 bg-gray-100',
-      },
-      border: {
-        active: 'border',
-        accent: 'border-t-4 rounded-none',
-      },
+export const AlertStyles = cva({
+  base: 'flex p-4 mb-4 text-sm rounded-lg dark:bg-gray-800',
+  variants: {
+    status: {
+      info: 'text-blue-700 dark:text-blue-400 bg-blue-100',
+      danger: 'text-red-700 dark:text-red-400 bg-red-100',
+      success: 'text-green-700 dark:text-green-400 bg-green-100',
+      warning: 'text-yellow-700 dark:text-yellow-400 bg-yellow-100',
+      dark: 'text-gray-700 dark:text-gray-400 bg-gray-100',
     },
-    defaultVariants: {
-      status: 'info',
+    border: {
+      active: 'border',
+      accent: 'border-t-4 rounded-none',
     },
-    compoundVariants: [
-      {
-        status: 'info',
-        border: ['active', 'accent'],
-        class: 'border-blue-300 dark:border-blue-800',
-      },
-      {
-        status: 'danger',
-        border: ['active', 'accent'],
-        class: 'border-red-300 dark:border-red-800',
-      },
-      {
-        status: 'success',
-        border: ['active', 'accent'],
-        class: 'border-green-300 dark:border-green-800',
-      },
-      {
-        status: 'warning',
-        border: ['active', 'accent'],
-        class: 'border-yellow-300 dark:border-yellow-800',
-      },
-      {
-        status: 'dark',
-        border: ['active', 'accent'],
-        class: 'border-gray-300 dark:border-gray-800',
-      },
-    ],
   },
-);
+  defaultVariants: {
+    status: 'info',
+  },
+  compoundVariants: [
+    {
+      status: 'info',
+      border: ['active', 'accent'],
+      class: 'border-blue-300 dark:border-blue-800',
+    },
+    {
+      status: 'danger',
+      border: ['active', 'accent'],
+      class: 'border-red-300 dark:border-red-800',
+    },
+    {
+      status: 'success',
+      border: ['active', 'accent'],
+      class: 'border-green-300 dark:border-green-800',
+    },
+    {
+      status: 'warning',
+      border: ['active', 'accent'],
+      class: 'border-yellow-300 dark:border-yellow-800',
+    },
+    {
+      status: 'dark',
+      border: ['active', 'accent'],
+      class: 'border-gray-300 dark:border-gray-800',
+    },
+  ],
+});
 
 export type AlertProps = {
   children: React.ReactNode;
