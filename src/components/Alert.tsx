@@ -2,8 +2,8 @@ import React from 'react';
 import { cva, type VariantProps } from 'cva';
 import { twMerge } from 'tailwind-merge';
 
-export const AlertStyles = cva({
-  base: 'flex p-4 mb-4 text-sm rounded-lg dark:bg-gray-800',
+export const AlertVariants = cva({
+  base: 'flex p-4 text-sm rounded-lg dark:bg-gray-800',
   variants: {
     status: {
       info: 'text-blue-700 dark:text-blue-400 bg-blue-100',
@@ -15,6 +15,10 @@ export const AlertStyles = cva({
     border: {
       active: 'border',
       accent: 'border-t-4 rounded-none',
+    },
+    outline: {
+      active: 'bg-transparent',
+      inactive: '',
     },
   },
   defaultVariants: {
@@ -56,7 +60,7 @@ export type AlertProps = {
   icon?: boolean;
   showCloseButton?: boolean;
   className?: string;
-} & VariantProps<typeof AlertStyles>;
+} & VariantProps<typeof AlertVariants>;
 
 const Alert: React.FC<AlertProps> = ({
   title,
@@ -71,7 +75,7 @@ const Alert: React.FC<AlertProps> = ({
     return null;
   }
   return (
-    <div className={twMerge(AlertStyles(props), className)} role="alert">
+    <div className={twMerge(AlertVariants(props), className)} role="alert">
       {icon && (
         <svg
           aria-hidden="true"

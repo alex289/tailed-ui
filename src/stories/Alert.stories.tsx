@@ -54,6 +54,16 @@ Dark.args = {
   showCloseButton: true,
 };
 
+export const Outline = Template.bind({});
+Outline.args = {
+  title: 'Outline Alert!',
+  message: 'Change a few things up and try submitting again.',
+  status: 'danger',
+  icon: true,
+  outline: 'active',
+  border: 'active',
+};
+
 export const CustomStyles = Template.bind({});
 CustomStyles.args = {
   title: 'Dark Alert!',

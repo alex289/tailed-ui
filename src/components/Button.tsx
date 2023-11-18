@@ -2,8 +2,8 @@ import { cva, type VariantProps } from 'cva';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export const ButtonStyles = cva({
-  base: 'mx-3 mb-2 rounded-lg font-medium disabled:cursor-not-allowed focus:ring-4 focus:outline-none inline-flex items-center',
+export const ButtonVariants = cva({
+  base: 'inline-flex items-center justify-center disabled:cursor-not-allowed whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   variants: {
     color: {
       default:
@@ -122,7 +122,7 @@ type ButtonProps = {
   children?: React.ReactNode;
   loading?: boolean;
   className?: string;
-} & VariantProps<typeof ButtonStyles>;
+} & VariantProps<typeof ButtonVariants>;
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -137,7 +137,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       onClick={props.onClick}
       type={type}
-      className={twMerge(ButtonStyles(props), className)}>
+      className={twMerge(ButtonVariants(props), className)}>
       {loading && (
         <svg
           aria-hidden="true"

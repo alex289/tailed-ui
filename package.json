@@ -59,28 +59,24 @@
   "homepage": "https://github.com/alex289/tailed-ui#readme",
   "keywords": [
     "React",
-    "Component",
-    "Library",
-    "Rollup",
     "Typescript",
     "TailwindCSS",
     "Storybook"
   ],
   "dependencies": {
-    "@changesets/changelog-github": "^0.4.8",
-    "@changesets/cli": "^2.26.2",
     "@types/react": "^18.2.37",
     "autoprefixer": "^10.4.16",
     "cva": "1.0.0-beta.1",
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook-dark-mode": "^3.0.1",
     "tailwind-merge": "^2.0.0",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
@@ -101,6 +97,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "storybook": "^7.5.3",
+    "storybook-dark-mode": "^3.0.1",
     "tslib": "^2.6.2",
     "tsup": "^7.3.0"
   }
