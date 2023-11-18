@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- [`006f49f`](https://github.com/alex289/tailed-ui/commit/006f49fe97de9e8a79cc9e3c073cbded992f6e9b) Thanks [@alex289](https://github.com/alex289)! - Replace rollup with tsup
+
 ## 0.3.2
 
 ### Patch Changes
