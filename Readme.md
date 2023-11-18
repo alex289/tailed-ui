@@ -16,29 +16,46 @@ pnpm install tailed-ui
 ```
 
 ### Usage
+
 #### Stylesheet
 
 First, you'll need to import the `index.css` CSS file distributed by the package. This should be done at the root of your project (in `index.js` or `App.tsx` of your React app) and will look like:
 
 ```tsx
-import 'tailed-ui/index.css';
+import 'tailed-ui/styles.css';
+```
 
-...
+If you use Tailwindcss you can also add the tailed-ui to the contents of the tailwind configuration:
+
+```tsx
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/tailed-ui/dist/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+};
+
+export default config;
 ```
 
 #### Components
 
+> ⚠️ Currently the autocomplete of some style props is not working properly. Please look at the documentation for all component props and styles
+
 Usage of components (after the library installed as a dependency into another project) will look like:
 
 ```TSX
-import React from "react";
-import { TestComponent } from "tailed-ui";
+import { Button } from "tailed-ui";
 
 const App = () => (
-  <div className="app-container">
+  <>
     <h1>Hello I'm consuming the component library</h1>
-    <TestComponent heading={'Some heading'} content={<div>Some content</div>} />
-  </div>
+    <Button>Hello World!</Button>
+  </>
 );
 
 export default App;

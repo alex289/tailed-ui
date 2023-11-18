@@ -9,10 +9,9 @@
     "target": "es6",
     "esModuleInterop": true,
     "strict": true,
-    "incremental": true,
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": ["src/**/*", "tailwind.config.ts"],
+  "include": ["src/**/*", "*.ts"],
   "exclude": ["src/**/*.stories.tsx"]
 }

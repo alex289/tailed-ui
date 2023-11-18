@@ -1,4 +1,4 @@
-import { cva, VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -126,15 +126,14 @@ export const ButtonStyles = cva(
   },
 );
 
-type ButtonVariantProps = VariantProps<typeof ButtonStyles>;
-interface ButtonProps extends ButtonVariantProps {
+type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   children?: React.ReactNode;
   loading?: boolean;
   className?: string;
-}
+} & VariantProps<typeof ButtonStyles>;
 
 const Button: React.FC<ButtonProps> = ({
   children,

@@ -7,17 +7,43 @@
     "format:check": "prettier --check \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "lint": "eslint --ext .tsx,.ts src",
     "typecheck": "tsc --noEmit",
-    "build": "rollup -c --bundleConfigAsCjs",
+    "build": "tsup",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "release": "pnpm run build && pnpm publish --no-git-checks --access public && pnpm exec changeset tag"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    "./styles.css": "./dist/index.css",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js"
+    },
+    "./components/**": {
+      "types": "./dist/components/**.d.ts",
+      "import": "./dist/components/**.mjs",
+      "require": "./dist/components/**.js"
+    }
+  },
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
   "author": {
     "name": "Alexander Konietzko",
     "url": "https://alexanderkonietzko.vercel.app"
@@ -55,13 +81,6 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.23.3",
-    "@babel/preset-react": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.3",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
@@ -70,21 +89,16 @@
     "@storybook/react": "^7.5.3",
     "@storybook/react-webpack5": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "eslint": "^8.53.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.54.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-storybook": "^0.6.15",
     "postcss-loader": "^7.3.3",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "prop-types": "^15.8.1",
-    "rollup": "^4.3.0",
-    "rollup-plugin-copy": "^3.5.0",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.5.3",
-    "tslib": "^2.6.2"
+    "tslib": "^2.6.2",
+    "tsup": "^7.3.0"
   }
 }

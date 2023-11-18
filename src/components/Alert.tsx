@@ -1,5 +1,5 @@
 import React from 'react';
-import { cva, VariantProps } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 
 export const AlertStyles = cva(
@@ -51,15 +51,14 @@ export const AlertStyles = cva(
   },
 );
 
-type AlertVariantProps = VariantProps<typeof AlertStyles>;
-export interface AlertProps extends AlertVariantProps {
+export type AlertProps = {
   children: React.ReactNode;
   title?: string;
   message?: string;
   icon?: boolean;
   showCloseButton?: boolean;
   className?: string;
-}
+} & VariantProps<typeof AlertStyles>;
 
 const Alert: React.FC<AlertProps> = ({
   title,
