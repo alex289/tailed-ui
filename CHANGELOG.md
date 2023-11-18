@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.4.1
+
+### Patch Changes
+
+- [`b186038`](https://github.com/alex289/tailed-ui/commit/b186038bae88f0389865c8591cee0558c588732d) Thanks [@alex289](https://github.com/alex289)! - Fix building storybook
+
 ## 0.4.0
 
 ### Minor Changes
