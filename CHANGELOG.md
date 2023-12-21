@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.7.0
+
+### Minor Changes
+
+- [`384e7e6`](https://github.com/alex289/tailed-ui/commit/384e7e60b38dc907ae32cd843e1b05f6fe3d85d9) Thanks [@alex289](https://github.com/alex289)! - Update dependencies
+
 ## 0.6.0
 
 ### Minor Changes
