@@ -22,7 +22,7 @@ pnpm install tailed-ui
 First, you'll need to import the `index.css` CSS file distributed by the package. This should be done at the root of your project (in `index.js` or `App.tsx` of your React app) and will look like:
 
 ```tsx
-import 'tailed-ui/styles.css';
+import 'tailed-ui/index.css';
 ```
 
 If you use Tailwindcss you can also add the tailed-ui to the contents of the tailwind configuration:
@@ -47,7 +47,7 @@ export default config;
 Usage of components (after the library installed as a dependency into another project) will look like:
 
 ```TSX
-import { Button } from "tailed-ui";
+import { Button } from "tailed-ui/Button";
 
 const App = () => (
   <>
