@@ -1,5 +1,13 @@
 # tailed-ui
 
+## 0.8.0
+
+### Minor Changes
+
+- [`98516f9`](https://github.com/alex289/tailed-ui/commit/98516f93deac97536bf7b02622989f75213a8160) Thanks [@alex289](https://github.com/alex289)! - Adjust Readme instructions
+
+- [`0492aa1`](https://github.com/alex289/tailed-ui/commit/0492aa18e0c860a8a694d8e67c788d91e7b8f2de) Thanks [@alex289](https://github.com/alex289)! - Remove barrel files
+
 ## 0.7.0
 
 ### Minor Changes
