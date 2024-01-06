@@ -1,5 +1,11 @@
 # tailed-ui
 
+## 0.9.0
+
+### Minor Changes
+
+- [`790e5cb`](https://github.com/alex289/tailed-ui/commit/790e5cbed9283780ab5c43505550ad6da0505e4e) Thanks [@alex289](https://github.com/alex289)! - Update License year
+
 ## 0.8.0
 
 ### Minor Changes
